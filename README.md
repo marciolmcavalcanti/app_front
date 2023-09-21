@@ -1,4 +1,4 @@
-# Meu Front
+# Front-end MVP Sprint I
 
 Este pequeno projeto faz parte do meu MVP da Disciplina **Desenvolvimento Full Stack Básico** 
 do curso de pós-graduação em **Engenharia de Software** da PUC-Rio.
