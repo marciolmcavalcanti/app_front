@@ -1,95 +1,113 @@
-body,
-ul,
-li {
-    font-family: tahoma;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(225, 222, 199);
-}
-
-header {
-    background-color: rgb(225, 222, 199);
-    text-align: center;
+/* Cabeçalho da Página*/
+.imagemTitulo {    
     position: relative;
-    width: 100%;
+    background-color: rgb(21, 21, 21);
+    color: #e4ca8e;
 }
 
-.title {
-    color: white;
-    width: 100%;
-    background-color: rgb(35, 32, 24);
-    display: inline-block;
-    padding: 2px 0px;
-    position: sticky;
-    top: 0px;
+/* Logotipo */
+.imgLogo {
+    width: 280px;
+
 }
 
-.banner {
-    height: 300px;
-    overflow: hidden;
+/* Título da Página */
+.tituloPagina {
+    margin-top: -10px;
+    margin-bottom: 10px;
 }
 
-.banner img {
-    margin: 0px 0px 0px 0px;
-    width: 100%;
+/* Área total da Página */
+.container {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url(img/home.jpg);
 }
 
+/* Área de inclusão de um novo item */
 .newItem {
-    background-color: rgb(225, 222, 199);
-    padding: 30px 40px;
+    background-color: transparent;
+    padding: 15px;
     color: white;
     display: flex;
     justify-content: center;
 }
 
-.newItem:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
+/* Item a ser adicionado */
 #newInput {
+    background-color: white;
     margin: 0;
-    border: 1px solid rgb(35, 32, 24);
+    border: 1px solid rgb(0, 0, 0);
     width: 25%;
     padding: 10px;
     font-size: 16px;
+    border-radius: 10px;
+    margin-left: 3px;    
 }
 
+/* Qtd a ser adicionada */
 #newQuantity {
     margin: 0;
-    border: 1px solid rgb(35, 32, 24);
+    border: 1px solid rgb(0, 0, 0);
     width: 8%;
     padding: 10px;
     font-size: 16px;
+    border-radius: 10px;
+    margin-left: 3px;    
 }
 
+/* Preço a ser adicionado */
 #newPrice {
     margin: 0;
-    border: 1px solid rgb(35, 32, 24);
+    border: 1px solid rgb(0, 0, 0);
     width: 5%;
     padding: 10px;
     font-size: 16px;
+    border-radius: 10px;
+    margin-left: 3px;    
 }
 
-
+/* Botão de adicionar item*/
 .addBtn {
     padding: 9px 10px;
-    background-color: rgb(35, 32, 24);
+    background-color: rgb(21, 21, 21);
     color: white;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
-    border-radius: 2px;
+    border-radius: 10px;
+    margin-left: 3px;
 }
 
-.addBtn:hover {
-    background-color: #2ab53a;
+/* Botão de pesquisa por bolões de uma loteria*/
+.findBtn {
+    padding: 10px 10px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;    
+    border-radius: 10px;
+    margin-left: 3px;
 }
 
+/* Cor do botão de adicionar ao passar o mouse */
+.addBtn:hover {
+    background-color: rgb(228, 193, 110);
+    color: rgb(5, 5, 5);
+}
+
+/* Cor do botão de pesquisar ao passar o mouse */
+.findBtn:hover {
+    background-color: rgb(228, 193, 110);
+    color: rgb(5, 5, 5);
+}
+
+/* Posicionamento da Tabela */
 .items {
     margin: 0;
     padding: 0;
@@ -97,38 +115,84 @@ header {
     justify-content: center;
 }
 
-.close:hover {
-    color: #f44336;
-    font-weight: bolder;
-}
-
-table,
-th,
-td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    cursor: pointer;
-    position: relative;
-    padding: 12px 8px 12px 10px;
-    font-size: 18px;
-    transition: 0.2s;
-    text-align: start;
-}
-
+/* Tabela */
 table{
     background-color: white;
     width: 50%;
 }
 
+/* Títulos das colunas das tabelas */
+th {
+    background-color: rgb(21, 21, 21);
+    color: #e4ca8e;
+}
+
+/* Tabelas, Títulos e Células*/
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;    
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+    font-size: 18px;
+    transition: 0.2s;
+    text-align: center;
+}
+
+/* Zebrando a Tabela - Cor da linha ímpar da tabela */
 tr:nth-child(odd){
     background-color: #eee;
 }
 
-th:nth-child(1){
-    width: 80%;
+/* Cor da linha e da fonte na tabela de itens ao passar o mouse */
+tr:hover {
+    background: rgb(230, 223, 179);
+    color: #0000da;
 }
 
-tr:hover {
-    background: rgb(200, 199, 199);
+/* Tamanho da coluna do nome do Bolão*/
+th:nth-child(2){
+    width: 50%;
 }
+
+/* Tamanho da coluna do valor do Bolão*/
+th:nth-child(4){
+    width: 15%;
+}
+
+/* Conteúdo da Página*/
+body {
+    font-family: tahoma;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;  
+}
+
+/* Rodapé da Página */
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(21, 21, 21);
+    color: rgb(255, 231, 176);
+    width: 100%;
+    height: 60px;    
+    text-align: center;
+    line-height: 60px;
+}
+
+.icones {
+    margin-top: 13px;
+    margin-left: 15px;
+}
+
+
+
+
+
+
+
+
+
 

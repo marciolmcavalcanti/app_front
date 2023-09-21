@@ -6,43 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/fav.ico">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
-    <title>Projeto</title>
+    <title>Bolões de Apostas</title>
 </head>
 
-<body>
+<body class="container">
      <!-- Cabeçalho de informações do sistema -->
-    <header>
-        <div class="title">
-            <h2>Lista de Compras</h2>
-        </div>
-        <div class="banner">
-            <img src="https://images.contentstack.io/v3/assets/blt45c082eaf9747747/bltbcca43584b660977/5de0b6aa703bd50385f981ad/Header-5.jpg?width=1200&height=630&fit=crop"
-                alt="y">
-        </div>
+    <header class="imagemTitulo">
+        <img class="imgLogo" src="img/logo.png" alt="Logotipo DEZ NA SORTE Loterias">
+        <h2 class="tituloPagina">BOLÕES DE APOSTAS</h2>
     </header>
 
-     <!-- Opções para adicionar um novo item -->
-    <section class="newItem">
-        <input type="text" id="newInput" placeholder="Adicionar novo item:">
-        <input type="text" id="newQuantity" placeholder="Quantidade:">
-        <input type="text" id="newPrice" placeholder="Valor:">
-        <span onclick="newItem()" class="addBtn">Adicionar</span>
-    </section>
+    <div>    
+        <!-- Opções para adicionar um novo item -->
+        <section class="newItem">
+            <select name="newInput" id="newInput" required>
+                <option value="">Selecione uma Loteria</option>
+                <option value="Mega Sena">Mega Sena</option>
+                <option value="Lotofácil">Lotofácil</option>
+                <option value="Lotomania">Lotomania</option>
+                <option value="Quina">Quina</option>
+                <option value="Timemania">Timemania</option>
+                <option value="Dupla Sena">Dupla Sena</option>
+                <option value="Dia de Sorte">Dia de Sorte</option>
+                <option value="+Milionária">+Milionária</option>
+                <option value="Loteca">Loteca</option>
+              </select>
+            <input type="number" id="newQuantity" name="newQuantity" value="1" min="1" max="100" placeholder="Cotas">
+            <input type="text" id="newPrice" placeholder="Valor:">
+            <span onclick="newItem()" class="addBtn">Adicionar</span>
+            <span onclick="findItens()" class="findBtn"><img src="img/busca.png" alt="Botão de Pesquisa"></span>
+        </section>
 
-    <!-- Tabela com items existentes -->
-    <section class="items">
-        <table id="myTable">
-            <tr>
-                <th>Nome</th>
-                <th>Quantidade</th>
-                <th>Valor</th>
-                <th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15px" height="15px"></th>
-            </tr>
-        </table>
-    </section>
+        <!-- Tabela com items existentes -->
+        <section class="items">
+            <table id="myTable">
+                <tr>
+                    <th>Código</th>
+                    <th>Bolão</th>
+                    <th>Cotas</th>
+                    <th>Valor</th>
+                    <th></th>
+                </tr>
+            </table>
+        </section>
+    </div>
 
+     <!-- Rodapé da Página com Informações de Contato -->
+     <footer>
+        <a target="_blank" href="https://www.linkedin.com/in/marcio-motta"><img class="icones" src="img/linkedin.png" alt=""></a>
+        <a target="_blank" href="mailto:marciolmc70@gmail.com"><img class="icones" src="img/email.png" alt=""></a>
+        <a target="_blank" href="https://deznasorte.com"><img class="icones" src="img/site.png" alt=""></a>
+     </footer>  
+
+    <!-- Scripts -->
     <script src="scripts.js"></script>
+  
 </body>
 
 </html>
